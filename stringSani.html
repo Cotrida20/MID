@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        function sanitizeString(str) {
+            // Remove leading and trailing whitespace
+            str = str.trim();
+            // Replace multiple spaces with a single space
+            str = str.replace(/\s+/g, ' ');
+            // Remove special characters except for alphanumeric characters and spaces
+            str = str.replace(/[^a-zA-Z0-9 ]/g, '');
+            return str;
+        }
+
+        let inputString = "  Hello,   World!  ";
+        let sanitizedString = sanitizeString(inputString);
+        console.log(sanitizedString); // Output: "Hello World"
+
+        function sanitizeString(input) {
+    return input.replace(/[<>\/\\]/g, '*');
+}
+console.log(sanitizeString("<script>alert('hello')</script>"));
+// Output: *script*alert('hello')*/script*
+     
+   </script> 
+</body>
+</html>
