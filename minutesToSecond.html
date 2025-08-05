@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Function to convert seconds to minutes
+
+function convertSecondsToMinutes() {
+    const seconds = parseFloat(prompt("Enter the number of seconds:"));
+    if (isNaN(seconds)) {
+        alert("Please enter a valid number!");
+        return;
+    }
+    const minutes = seconds / 60;
+    alert(`${seconds} seconds is equal to ${minutes.toFixed(2)} minutes`);
+}
+
+// Call the function
+convertSecondsToMinutes();
+    </script>
+</body>
+</html>

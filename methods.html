@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //literal object
+        const person = {
+            name: "John",
+            age: 30,
+            greet: function() {
+                console.log(`Hello, my name is ${this.name}`);
+            }
+        };
+        console.log(person.name);
+        person.greet(); 
+    
+        
+        // class object
+        class Animal{
+            constructor(name, type) {
+                this.name = name;
+                this.type = type;
+            }
+
+            speak() {
+                console.log(`${this.name} makes a sound.`);
+            }
+            walk() {
+                console.log(`${this.name} is walking`);
+            }
+        }
+        let dog =new Animal("Dog", "Mammal");
+        console.log(dog.name);
+        dog.walk();
+
+        class Chicken extends Animal{
+            constructor(name, type, color) {
+                super(name, type);
+                this.color = color;
+
+            }
+            sleep() {
+                console.log(`${this.name} is sleeping`);
+            }
+        }
+        let hen = new Chicken("Hen", "Bird", "White");
+        console.log(hen.name);
+        hen.speak();
+        hen.sleep();
+        
+        
+
+
+    </script>
+</body>
+</html>

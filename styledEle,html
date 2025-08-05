@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List Display</title>
+    <style>
+        body {
+            background-color: rgb(241, 247, 252);
+        }
+        .h {
+            background-color: #ffffff;
+            font-weight: 200;
+            font-size: 1.3rem;
+            font-family: "Segoe UI", Verdana, sans-serif;
+            color: rgb(73, 72, 72);
+            padding: 0.6rem 0.4rem;
+            margin: 0.5rem 0;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="todo-container"></div>
+
+    <script>
+        const todos = [
+            "Buy groceries",
+            "Finish JavaScript assignment",
+            "Call plumber for kitchen leak",
+            "Book doctor appointment",
+            "Clean the garage"
+        ];
+
+        const container = document.getElementById('todo-container');
+
+        todos.forEach(todo => {
+            // Create h1 element
+            const h1 = document.createElement('h1');
+            
+            // Set class
+            h1.className = 'h';
+            
+            // Set text content
+            h1.textContent = todo;
+            
+            // Add to container
+            container.appendChild(h1);
+        });
+    </script>
+</body>
+</html>

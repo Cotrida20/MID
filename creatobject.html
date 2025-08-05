@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Part a: Creating object using different methods
+// Literal object
+const postLiteral = {
+    id: "123456789",
+    author: {
+        userId: "ugyy7gh7",
+        name: "John Doe",
+        profilePicture: "https://url.net/123/pic.jpg"
+    },
+    content: [
+        { mediaType: "image", mediaUrl: "https://url.net/123/pic3.jpg" },
+        { mediaType: "video", mediaUrl: "https://url.net/123/pic4.jpg" }
+    ],
+    engagements: {
+        likes: 254,
+        loves: 34,
+        haha: 67,
+        wow: 23,
+        sad: 0,
+        angry: 0,
+        shares: 45
+    },
+    comments: [
+        {
+            commentId: "c767",
+            userId: "uytutyt6",
+            text: "Gojasi wa kwathu!",
+            timestamp: "2025-08-04T09:15:00Z"
+        },
+        {
+            commentId: "c768",
+            userId: "yyytywe",
+            text: "Looking great my dear!",
+            timestamp: "2025-08-04T09:15:00Z"
+        }
+    ],
+    privacy: "public",
+    createdAt: "2025-08-04T08:30:00Z",
+    updatedAt: "2025-08-04T09:00:00Z",
+    tags: ["Alice Wawukali", "James Wantali", "Peter Woyera"]
+};
+
+// Class object
+class Post {
+    constructor() {
+        this.id = "123456789";
+        this.author = {
+            userId: "ugyy7gh7",
+            name: "John Doe",
+            profilePicture: "https://url.net/123/pic.jpg"
+        };
+        this.content = [
+            { mediaType: "image", mediaUrl: "https://url.net/123/pic3.jpg" },
+            { mediaType: "video", mediaUrl: "https://url.net/123/pic4.jpg" }
+        ];
+        this.engagements = {
+            likes: 254,
+            loves: 34,
+            haha: 67,
+            wow: 23,
+            sad: 0,
+            angry: 0,
+            shares: 45
+        };
+        this.comments = [
+            {
+                commentId: "c767",
+                userId: "uytutyt6",
+                text: "Gojasi wa kwathu!",
+                timestamp: "2025-08-04T09:15:00Z"
+            },
+            {
+                commentId: "c768",
+                userId: "yyytywe",
+                text: "Looking great my dear!",
+                timestamp: "2025-08-04T09:15:00Z"
+            }
+        ];
+        this.privacy = "public";
+        this.createdAt = "2025-08-04T08:30:00Z";
+        this.updatedAt = "2025-08-04T09:00:00Z";
+        this.tags = ["Alice Wawukali", "James Wantali", "Peter Woyera"];
+    }
+}
+const postClass = new Post();
+
+// Function constructor
+function PostFunc() {
+    this.id = "123456789";
+    this.author = {
+        userId: "ugyy7gh7",
+        name: "John Doe",
+        profilePicture: "https://url.net/123/pic.jpg"
+    };
+    this.content = [
+        { mediaType: "image", mediaUrl: "https://url.net/123/pic3.jpg" },
+        { mediaType: "video", mediaUrl: "https://url.net/123/pic4.jpg" }
+    ];
+    this.engagements = {
+        likes: 254,
+        loves: 34,
+        haha: 67,
+        wow: 23,
+        sad: 0,
+        angry: 0,
+        shares: 45
+    };
+    this.comments = [
+        {
+            commentId: "c767",
+            userId: "uytutyt6",
+            text: "Gojasi wa kwathu!",
+            timestamp: "2025-08-04T09:15:00Z"
+        },
+        {
+            commentId: "c768",
+            userId: "yyytywe",
+            text: "Looking great my dear!",
+            timestamp: "2025-08-04T09:15:00Z"
+        }
+    ];
+    this.privacy = "public";
+    this.createdAt = "2025-08-04T08:30:00Z";
+    this.updatedAt = "2025-08-04T09:00:00Z";
+    this.tags = ["Alice Wawukali", "James Wantali", "Peter Woyera"];
+}
+const postFunc = new PostFunc();
+
+// Part b: Updating the object
+// Adding a new comment
+postLiteral.comments.push({
+    commentId: "c769",
+    userId: "newuser123",
+    text: "Great post!",
+    timestamp: new Date().toISOString()
+});
+
+// Incrementing likes
+postLiteral.engagements.likes += 1;
+
+// Deleting a tag
+postLiteral.tags.splice(0, 1); // Removes first tag
+
+console.log("Updated post:", postLiteral);
+
+// Part c: JSON conversion
+const postJSON = JSON.stringify(postLiteral);
+console.log("JSON representation:", postJSON);
+
+const parsedPost = JSON.parse(postJSON);
+console.log("Parsed back to JS object:", parsedPost);
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const todos = [
+    {
+        id: 1,
+        description: "Buy groceries",
+        dueDate: "2025-08-05",
+        done: false,
+        priority: "high",
+        createdAt: "2025-08-01T09:00:002"
+    },
+    {
+        id: 2,
+        description: "Finish JavaScript assignment",
+        dueDate: "2025-08-06",
+        done: false,
+        priority: "medium",
+        createdAt: "2025-08-02T14:30:002"
+    },
+    {
+        id: 3,
+        description: "Call plumber for kitchen leak",
+        dueDate: "2025-08-04",
+        done: true,
+        priority: "high",
+        createdAt: "2025-08-01T16:45:002"
+    },
+    {
+        id: 4,
+        description: "Book doctor appointment",
+        dueDate: "2025-08-08",
+        done: false,
+        priority: "low",
+        createdAt: "2025-08-03T11:15:002"
+    },
+    {
+        id: 5,
+        description: "Clean the garage",
+        dueDate: "2025-08-10",
+        done: false,
+        priority: "medium",
+        createdAt: "2025-08-03T18:20:002"
+    }
+];
+
+// Part a: Print description and due date using forEach
+console.log("Todo descriptions and due dates:");
+todos.forEach(todo => {
+    console.log(`${todo.description} - Due: ${todo.dueDate}`);
+});
+
+// Part b: Filter incomplete todos
+const incompleteTodos = todos.filter(todo => !todo.done);
+console.log("Incomplete todos:", incompleteTodos);
+
+// Part c: Find "Clean the garage" todo
+const garageTodo = todos.find(todo => todo.description === "Clean the garage");
+console.log("Garage cleaning todo:", garageTodo);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// Function to count each vowel in a string
+        function countEachVowel(sentence) {
+            const vowels = { a: 0, e: 0, i: 0, o: 0, u: 0 };
+            for (let char of sentence.toLowerCase()) {
+                if (vowels.hasOwnProperty(char)) {
+                    vowels[char]++;
+                }
+            }
+            return vowels;
+        }
+        
+        // Example usage
+        console.log('Vowel counts in "Beautiful day at the zoo":', 
+            countEachVowel("Beautiful day at the zoo"));
+        
+        </script>
+</body>
+</html>
