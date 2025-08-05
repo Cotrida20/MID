@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // the use of break and continue statements in loop structures nad their effect inprogram
+        for (let i = 0; i < 10; i++) {
+            if (i === 5) {
+                console.log("Breaking the loop at i =", i);
+                break; // exits the loop when i is 5
+            }
+            console.log("Current value of i:", i);
+        }
+
+        console.log("Loop ended due to break statement.");
+        for (let j = 0; j < 10; j++) {
+            if (j === 5) {
+                console.log("Skipping the iteration at j =", j);
+                continue; // skips the current iteration when j is 5 and continue iterating up to 9 since the values ends at 10.
+            }
+            console.log("Current value of j:", j);
+        }
+
+        console.log("Continuing with continue statement:");
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Time of the day 
+        let timeOfTheDay = "morning";
+        let greeting = "";
+        if (timeOfTheDay === "morning") {
+            greeting = "Good morning user!";
+        } else if (timeOfTheDay === "afternoon") {
+            greeting = "Good afternoon!";
+        } else if (timeOfTheDay === "evening") {
+            greeting = "Good evening!";
+        } else {
+            greeting = "Hello!";
+        }
+        console.log(greeting);
+        
+        // Using switch statement
+        switch (timeOfTheDay) {
+            case "morning":
+                greeting = "Good morning user!";
+                break;
+            case "afternoon":
+                greeting = "Good afternoon!";
+                break;
+            case "evening":
+                greeting = "Good evening!";
+                break;
+            default:
+                greeting = "Hello!";
+        }
+        console.log(greeting);
+        
+    </script>
+</body>
+</html>
